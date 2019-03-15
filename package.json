@@ -4,6 +4,10 @@
   "description": "nuxt exercise",
   "author": "Kayac Inc.",
   "private": true,
+  "engines": {
+    "node": "10.14.2",
+    "npm": "6.4.1"
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",

@@ -1,22 +1,18 @@
 # nuxt-exercise
 
-> nuxt exercise
+## 事前に用意するもの
+- node.js: v10.14.2
+- npm: v6.4.1
 
-## Build Setup
-
-``` bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm start
-
-# generate static project
-$ npm run generate
+## 環境構築
 ```
+npm install
+```
+## 開発手順
+- `npm run dev`
+  - 開発サーバーを `localhost:3000` で起動します
+  - ホットリローディング が効きます
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+## ディレクトリ構造
+- nuxt.js の構造に準じています<br>
+詳しくは、[nuxt.jsのドキュメント:ディレクトリ構造](https://ja.nuxtjs.org/guide/directory-structure/) をご確認ください
