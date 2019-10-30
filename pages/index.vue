@@ -1,40 +1,26 @@
+<!-- TODO: this is the page where the user starts the quiz -->
 <template>
   <section class="container">
     <div>
-      <logo />
       <h1 class="title">
-        nuxt-exercise
+        神奈川に似会う町はどでれでしょうか？
       </h1>
-      <h2 class="subtitle">
-        My fantabulous Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >GitHub</a>
-      </div>
+    </div>
+    <div>
+      <button class="quiz-button" @click="$router.push('/Questions/One')">
+        <p class="button-label">
+          Start Quiz
+        </p>
+      </button>
     </div>
   </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
-  }
-}
+export default {}
 </script>
 
-<style>
+<style scoped>
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -42,27 +28,49 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-image: url("~assets/1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
-  color: #35495e;
+  color: black;
   letter-spacing: 1px;
+  margin-right: 43vw;
+  margin-left: 5vw;
+  margin-bottom: 30vh;
 }
 
-.subtitle {
+.quiz-button {
+  background-color: #CF835B;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 10vh;
+}
+
+.button-label {
+  color: white;
+  font-size: 20px;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+@media screen and (max-width: 760px) {
+
+  .title {
+  font-family: 'Lexend Deca', sans-serif;
+  display: block;
   font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+  font-size: 50px;
+  color: black;
+  margin-left: 5vh;
+  margin-right: 5vh;
+  }
 }
 
-.links {
-  padding-top: 15px;
-}
 </style>
