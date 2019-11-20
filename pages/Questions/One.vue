@@ -9,16 +9,16 @@
         <button class="quiz-button">
           <nuxt-link class="button-label" :to="{name: 'Questions-Two', params: { answer1: 'Yes' }}">
             <p>
-            Yes
-          </p>
-        </nuxt-link>
+              Yes
+            </p>
+          </nuxt-link>
         </button>
-          <button class="quiz-button">
+        <button class="quiz-button">
           <nuxt-link class="button-label" :to="{name: 'Questions-Two', params: { answer1: 'No' }}">
             <p>
-            No
-          </p>
-        </nuxt-link>
+              No
+            </p>
+          </nuxt-link>
         </button>
       </div>
     </div>

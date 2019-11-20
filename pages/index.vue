@@ -3,7 +3,7 @@
   <section class="container">
     <div>
       <h1 class="title">
-        神奈川に似会う町はどでれでしょうか？
+        神奈川で自分に合う町はどこ？
       </h1>
     </div>
     <div>

@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <h1 class="answer">
-        まちのおすすめは：
+        町のおすすめは：
       </h1>
       <div class="city-image">
         <img :src="require(`@/assets/` + share.image)" class="image" />
@@ -15,7 +15,7 @@
     <button class="quiz-button">
       <nuxt-link class="button-label" :to="{name: 'index'}">
         <p>
-            Start Again?
+          Start Again?
         </p>
       </nuxt-link>
     </button>
@@ -48,13 +48,12 @@ export default {
   methods: {
     determineResult() {
       for (let i = 0; i < this.potentialResult.length; i++) {
-        if (this.potentialResult[i].result1 === this.answer1) {
-          if (this.potentialResult[i].result2 === this.answer2) {
-            if (this.potentialResult[i].result3 === this.answer3) {
-              this.final = this.potentialResult[i]
-            }
-          }
-        }
+        if (this.potentialResult[i].result1 !== this.answer1) continue
+        if (this.potentialResult[i].result2 !== this.answer2) continue
+        if (this.potentialResult[i].result3 !== this.answer3) continue
+
+        this.final = this.potentialResult[i]
+        break
       }
     },
     sharableresult() {
@@ -94,7 +93,6 @@ export default {
 .city-image{
   max-width: 1000px;
   max-height: 600px;
-  /*background-image: url('~assets/kamakura.jpg');*/
 }
 
 .image{
