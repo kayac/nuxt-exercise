@@ -2,7 +2,6 @@
   <div class="container">
     <div>
       <h1 class="question">
-        Q2.食べ物の好き嫌いは多い方だ?
       </h1>
       <div class="button-container">
         <button class="quiz-button">

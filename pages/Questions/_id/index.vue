@@ -2,12 +2,16 @@
 <template>
   <div class="container">
     <div>
-      <h1 class="question">
-        Q1.あまり人に構われたくない方だ?
-      </h1>
+      <Question
+        :id= question.id
+        :question= question.question
+      />
+      <p>{{ question.id }}</p>
+      <p> Counter: "{{ counter }}" </p>
+      </button>
       <div class="button-container">
         <button class="quiz-button">
-          <nuxt-link class="button-label" :to="{name: 'Questions-Two', params: { answer1: 'Yes' }}">
+          <nuxt-link class="button-label" @click.native= "increment" :to="{name: 'Questions-id', params: { answer1: 'Yes', id: counter.toString() }}">
             <p>
               Yes
             </p>
@@ -26,9 +30,30 @@
 </template>
 
 <script>
+import Question from '@/components/Questions/Question'
+
 export default {
+  components: {
+    Question: Question
+  },
   data() {
     return {
+      id: this.$route.params.id
+    }
+  },
+  computed: {
+    question() {
+      return this.$store.state.questions.all.find(question => question.id === this.id)
+    },
+    counter() {
+      return this.$store.state.count
+    }
+  },
+  methods: {
+    increment() {
+      if (this.$store.state.count <= 4) {
+        this.$store.commit('increment')
+      }
     }
   }
 }
@@ -43,12 +68,6 @@ export default {
   align-items: center;
   text-align: center;
   background-color: #388A8A;
-}
-
-.question {
-  padding-bottom: 35px;
-  color: white;
-  font-size: 35px;
 }
 
 .title {

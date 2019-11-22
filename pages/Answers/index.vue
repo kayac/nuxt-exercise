@@ -28,12 +28,7 @@ export default {
     return {
       answer1: '',
       answer2: '',
-      answer3: '',
-      potentialResult: [
-        { rank: '1.', result1: 'Yes', result2: 'Yes', result3: 'Yes' }, { rank: '2.', result1: 'Yes', result2: 'Yes', result3: 'No' }, { rank: '3.', result1: 'Yes', result2: 'No', result3: 'Yes' }, { rank: '4.', result1: 'Yes', result2: 'No', result3: 'No' }, { rank: '5.', result1: 'No', result2: 'Yes', result3: 'Yes' }, { rank: '6.', result1: 'No', result2: 'Yes', result3: 'No' }, { rank: '7.', result1: 'No', result2: 'No', result3: 'Yes' }, { rank: '8.', result1: 'No', result2: 'No', result3: 'No' }],
-      final: '',
-      sharable: [{ rank: '1.', city: '錬倉タイプ', description: '', image: 'kamakura.jpg' }, { rank: '2.', city: '豆子タイプ', image: 'zushi.jpg' }, { rank: '3.', city: '葉山タイプ', image: 'hayama.jpg' }, { rank: '4.', city: '藤沢タイプ', image: 'fujisawa.jpg' }, { rank: '5.', city: '辻蛍タイプ', image: 'tsujidou.jpg' }, { rank: '6.', city: '横須貨タイプ', image: 'yokosuka.png' }, { rank: '7.', city: '茅ヶ崎タイプ', image: 'chigasaki.jpeg' }, { rank: '8.', city: '横浜タイプ', image: 'yokohama.jpg' }]
-    }
+      answer3: ''
   },
   created() {
     this.answer1 = this.$route.params.answer1
@@ -43,7 +38,6 @@ export default {
     this.selection = this.final.rank
     this.sharableresult()
     this.og = this.share
-    // this.openGraph()
   },
   methods: {
     determineResult() {

@@ -2,7 +2,6 @@
   <div class="container">
     <div>
       <h1 class="question">
-        Q3.住むなら戸建てよりマンションだ?
       </h1>
       <div class="button-container">
         <button class="quiz-button">

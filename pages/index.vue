@@ -1,4 +1,3 @@
-<!-- TODO: this is the page where the user starts the quiz -->
 <template>
   <section class="container">
     <div>
@@ -7,7 +6,7 @@
       </h1>
     </div>
     <div>
-      <button class="quiz-button" @click="$router.push('/Questions/One')">
+      <button class="quiz-button" @click="$router.push('/Questions/1')">
         <p class="button-label">
           Start Quiz
         </p>
